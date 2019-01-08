@@ -1,0 +1,26 @@
+<div class="navtabs-container">
+<nav mat-tab-nav-bar fxFlex fxLayout fxLayoutAlign="center center" >
+
+
+<a mat-tab-link routerLink='/dashboard'
+routerLinkActive #dashboard="routerLinkActive"
+[active] = "dashboard.isActive">
+Dashboard</a>
+
+
+
+<a mat-tab-link routerLink='/budget'
+routerLinkActive #budget="routerLinkActive"
+[active] = "budget.isActive">
+Set Budget</a>
+
+
+
+<a mat-tab-link routerLink='/expense'
+routerLinkActive #Expense="routerLinkActive"
+[active] = "Expense.isActive">
+Expense</a>
+
+</nav>
+
+  </div>

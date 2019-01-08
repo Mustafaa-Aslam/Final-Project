@@ -1,0 +1,108 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<br>
+<!-- <app-navtabs></app-navtabs> -->
+    <div class="container" color="accent">
+      <div fxLayout="column" fxLayoutAlign="center center" >
+          <mat-card class="example-card" color="primary">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image">
+                  
+                </div>
+                <mat-card-title>Hi!
+                </mat-card-title>
+                
+                <mat-card-subtitle>{{name}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                {{email}}
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-stroked-button color="accent" (click)="create()">View Profile</button>
+              </mat-card-actions>
+            </mat-card>
+            
+          </div>
+        </div>
+        <form [formGroup]="incomeForm" (ngSubmit)="insertIncome(incomeForm.value)">
+            <div class="form-group">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card-stats " >
+                <div class="card-header card-header-warning card-header-icon " [ngClass]="{'custom-card':true}" >
+                  <div class="card-icon">
+                    <i class="material-icons">content_copy</i>
+                  </div>
+                  <p class="card-category" >Add income</p>
+                  <h3 class="card-title"  >
+                    {{total}}
+                  </h3>
+                </div>
+                <div class="card-body">
+                    <input matInput placeholder="Amount" value="Sushi" formControlName="incomeAmount">
+                </div>
+                <div class = "card-footer">
+                    
+                    <button mat-raised-button style="align-content: center;" color="accent">Set</button>
+                </div>
+              </div>
+    
+            </div>
+            <div class="col-md-4">
+                <div class="card card-stats " >
+                  <div class="card-header card-header-warning card-header-icon " [ngClass]="{'custom-card':true}">
+                    <div class="card-icon">
+                      <i class="material-icons">content_copy</i>
+                    </div>
+                    <p class="card-category" >Expense</p>
+                    <h3 class="card-title" >
+      
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                      
+                  </div>
+                  <div class = "card-footer">
+                      
+                      <button mat-raised-button style="align-content: center;" color="accent"(click)="editExpense()">Edit Expense</button>
+                  </div>
+                </div>
+      
+              </div>
+              <div class="col-md-4">
+                  <div class="card card-stats " >
+                    <div class="card-header card-header-warning card-header-icon " [ngClass]="{'custom-card':true}">
+                      <div class="card-icon">
+                        <i class="material-icons">content_copy</i>
+                      </div>
+                      <p class="card-category" >Savings</p>
+                      <h3 class="card-title" >
+        
+                      </h3>
+                    </div>
+                    <div class="card-body">
+                        
+                    </div>
+                    <div class = "card-footer">
+                        
+                        <button mat-raised-button style="align-content: center;" color="accent">View Savings</button>
+                    </div>
+                  </div>
+        
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4" *ngFor="let in of incomeArray">
+              <p>{{in.amount}}</p>
+              <p>{{in.category}}</p>
+            </div>
+          </div>
+          </div>
+
+          
+          </div>
+          </form>
+
+  
+  

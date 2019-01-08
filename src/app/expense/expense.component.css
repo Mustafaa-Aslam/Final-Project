@@ -1,0 +1,23 @@
+div{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    
+}
+
+.background{
+    background-color: teal;
+}
+
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+.show{
+    visibility: visible;
+    display: block;
+}
+
+.custom-card{
+    background-color: teal;
+}

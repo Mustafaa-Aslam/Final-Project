@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+$bbuddy-primary: mat-palette($mat-teal, 800);
+$bbuddy-accent: mat-palette($mat-light-blue, 800);
+
+$bbuddy-warm: mat-palette($mat-red, 50);
+
+$bbuddy: mat-light-theme($bbuddy-accent, $bbuddy-primary,$bbuddy-warm);
+
+@include angular-material-theme($bbuddy);

@@ -1,0 +1,76 @@
+<div mainContent>
+  <form [formGroup]="expenseForm" (ngSubmit)="insertExpense(expenseForm.value)">
+    <div class="form-group">
+      <div class="row background" color="accent">
+        <div class="column col-md-12" color="primary">
+          <h1 style="text-align:center">Expense</h1>
+        </div>
+      </div>
+      <br>
+    </div>
+    <br>
+    <div class="container-fluid" *ngIf="total!=undefined">
+      <div class="col-md-12">
+        <div class="card card-stats ">
+          <div class="card-header card-header-warning card-header-icon col-md-12">
+            <div class="card-icon">
+              <i class="material-icons">content_copy</i>
+            </div>
+            <p class="card-category">Add Expense</p>
+            <h3 class="card-title">
+                {{total}}
+            </h3>
+          </div>
+          <div class="card-body col-md-12 {{class}}" style="text-align:center">
+            <div>
+              <input matInput placeholder="Amount" value="Sushi" formControlName="amount">
+            </div>
+            <div>
+              <mat-select placeholder="category" value="selected" formControlName="category">
+                <mat-option *ngFor="let cat of category" [value]="cat">
+                  {{cat}}
+                </mat-option>
+              </mat-select>
+            </div>
+            <div>
+              <button mat-stroked-button style="align-content: center;">Set</button>
+            </div>
+          </div>
+          <div class="card-footer col-md-12 ">
+            <div class="stats">
+
+              <button mat-raised-button style="align-content: center;" color="accent" (click)="hide()">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <br>
+  <br>
+  <div class="row">
+    <div class="column col-md-12" color="primary">
+      <h1 style="text-align:center">Expense</h1>
+    </div>
+    <div class="col-md-4" *ngFor="let b of expe">
+      <div class="container-fluid">
+
+        <div class="col-md-12">
+          <div class="card card-stats "  *ngIf="currentUser == b.id">
+            <div class="card-header card-header-warning card-header-icon " [ngClass]="{'custom-card':true}">
+              <div class="card-icon">
+                <i class="material-icons">content_copy</i>
+              </div>
+              <p class="card-category" >{{b.category}}</p>
+              <h3 class="card-title" >{{b.amount}}
+
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

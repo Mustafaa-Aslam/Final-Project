@@ -1,0 +1,22 @@
+<mat-sidenav-container color="primary">
+
+    <mat-sidenav #sidenav >
+    <app-navbar-list >
+
+    </app-navbar-list>
+    </mat-sidenav>
+
+
+<mat-sidenav-content>
+    <app-navbar (SideNavTog)="sidenav.toggle()">
+    </app-navbar>
+
+    <app-navtabs>
+    </app-navtabs>
+    <main>
+    <router-outlet></router-outlet>
+</main>
+</mat-sidenav-content>
+
+
+</mat-sidenav-container>

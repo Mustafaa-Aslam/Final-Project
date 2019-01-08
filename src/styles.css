@@ -1,0 +1,59 @@
+ /* You can add global styles to this file, and also import other style files */
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+
+
+html{
+  height:100%;
+}
+body{
+  height:100%;
+
+}
+/* .description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+}
+.description h1{
+ color:rgb(10, 10, 10) ;
+ text-align: center;
+ font-family: cursive;
+}
+.description p{
+ color:#666;
+ font-size: 20px;
+ width: 50%;
+ line-height: 1.5;
+}
+.description button{
+ border:1px  solid #F97300;
+ background:#F97300;
+ color:#fff;
+ position: relative;
+ text-align: center;
+ padding: 10px;
+ margin: 5px;
+}
+
+ */
+/* Full-width input fields */
+  /* input[type=text], input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+} */
+
+
+/* Set a style for all buttons */
+/* button {
+  background-color: #F97300;
+  color: white;
+  
+} */
+ 
